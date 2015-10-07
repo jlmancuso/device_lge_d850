@@ -17,7 +17,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/lge/d850/d850-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/d852/d852-vendor.mk)
+
+# Camera
+PRODUCT_PACKAGES += \
+    SnapdragonCamera
 
 # Audio
 PRODUCT_COPY_FILES += \
